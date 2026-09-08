@@ -1,0 +1,13 @@
+read_verilog -sv designs/alu_pipelined/rtl/pipelined_alu.sv
+
+hierarchy -top pipelined_alu
+
+proc
+memory
+opt
+techmap
+opt
+
+stat
+
+write_verilog -noattr runs/alu_pipelined/synthesis/netlist.v

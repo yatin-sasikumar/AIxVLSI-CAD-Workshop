@@ -138,7 +138,7 @@ module pipelined_alu_tb;
     // ============================================================
 
     initial begin
-        $dumpfile("../../runs/alu_pipelined/Simulation/pipelined_alu.vcd");
+        $dumpfile("runs/alu_pipelined/Simulation/pipelined_alu.vcd");
         $dumpvars(0, pipelined_alu_tb);
         pass_count = 0;
         fail_count = 0;

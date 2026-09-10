@@ -1,7 +1,7 @@
 {
 "DESIGN_NAME": "pipelined_alu",
 "VERILOG_FILES": [
-"dir::rtl/pipelined_alu.sv"
+"dir::alu_pipelined/rtl/pipelined_alu.sv"
 ],
 "CLOCK_PORT": "clk",
 "CLOCK_PERIOD": 10

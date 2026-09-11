@@ -10,7 +10,7 @@ All commands below are intended for the **MSYS2 UCRT64 terminal**.
 Run the automated setup script:
 
 ```bash
-./tools/setup.sh
+bash ./tools/setup.sh
 ```
 
 If permission is denied:
@@ -27,7 +27,7 @@ chmod +x tools/setup.sh
 ## 2. Run RTL Simulation
 
 ```bash
-./flows/sim.sh
+bash ./flows/sim.sh
 ```
 
 Simulation outputs are stored under:
@@ -45,7 +45,7 @@ gtkwave runs/alu_pipelined/simulation/pipelined_alu.vcd
 ## 4. Run RTL Lint
 
 ```bash
-./flows/lint.sh
+bash ./flows/lint.sh
 ```
 
 Lint log:
@@ -66,6 +66,20 @@ Synthesized netlist:
 runs/alu_pipelined/synthesis/netlist.v
 ```
 
+## 6. Run Physical Design
+
+
+```bash
+bash ./flows/physical.sh
+```
+Physical design results:
+
+```text
+runs/alu_pipelined/librelane/
+```
+
+The directory contains the generated layout, reports, logs, and intermediate results from the LibreLane flow.
+
 ---
 
 
@@ -77,13 +91,13 @@ runs/alu_pipelined/synthesis/netlist.v
 | Enter repository | `cd AIxVLSI-CAD-Workshop` |
 | Check location | `pwd` |
 | List files | `ls` |
-| Return to repo root | `cd "$(git rev-parse --show-toplevel)"` |
 | Setup environment | `./tools/setup.sh` |
 | Fix setup permission | `chmod +x tools/setup.sh` |
-| Run simulation | `./flows/sim.sh` |
+| Run simulation | `bash ./flows/sim.sh` |
 | Open waveform | `gtkwave runs/alu_pipelined/simulation/pipelined_alu.vcd` |
-| Run lint | `./flows/lint.sh` |
+| Run lint | `bash ./flows/lint.sh` |
 | Run synthesis | `yosys -s flows/synth.ys` |
+| Run physical design| `bash ./flows/physical.sh` |
 | Check Icarus | `iverilog -V` |
 | Check Verilator | `verilator --version` |
 | Check Yosys | `yosys --version` |

@@ -61,7 +61,7 @@ Conceptually:
                                  |
                                  v
                          Register File
-
+```
 ---
 
 ## 3. Opcode Definitions

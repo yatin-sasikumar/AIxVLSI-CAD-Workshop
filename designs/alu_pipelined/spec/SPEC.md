@@ -61,3 +61,22 @@ Conceptually:
                                  |
                                  v
                          Register File
+
+---
+
+## 3. Opcode Definitions
+
+The ALU supports eight operations selected using a 3-bit opcode.
+
+| Opcode | Operation | Description |
+|--------|-----------|-------------|
+| `000` | ADD | `operand_a + operand_b` |
+| `001` | SUB | `operand_a - operand_b` |
+| `010` | AND | `operand_a & operand_b` |
+| `011` | OR | `operand_a \| operand_b` |
+| `100` | XOR | `operand_a ^ operand_b` |
+| `101` | NOT | `~operand_a` |
+| `110` | Shift Left | `operand_a << 1` |
+| `111` | Shift Right | `operand_a >> 1` |
+
+The opcode is applied to the two operands read from the register file. The resulting ALU output is captured by the pipeline register on the active clock edge before being written back to the destination register.

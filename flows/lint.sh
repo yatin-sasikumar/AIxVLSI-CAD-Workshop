@@ -12,7 +12,7 @@ echo " ALU Pipelined - Verilator Lint"
 echo "=============================================="
 
 verilator --lint-only -Wall -Wno-fatal \
-    "$DESIGN/rtl/variations/master_buged.sv" \
+    "$DESIGN/rtl/pipelined_alu.sv" \
     2>&1 | tee "$RUN/verilator.log"
 
 echo ""

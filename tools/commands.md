@@ -22,12 +22,25 @@ chmod +x tools/setup.sh
 
 ---
 
+
 # VLSI CAD Flow
+
+## 1 Run RTL Lint
+
+```bash
+./flows/lint.sh
+```
+
+Lint log:
+
+```text
+runs/alu_pipelined/lint/verilator.log
+```
 
 ## 2. Run RTL Simulation
 
 ```bash
-bash ./flows/sim.sh
+./flows/sim.sh
 ```
 
 Simulation outputs are stored under:
@@ -42,19 +55,7 @@ runs/alu_pipelined/simulation/
 gtkwave runs/alu_pipelined/simulation/pipelined_alu.vcd
 ```
 
-## 4. Run RTL Lint
-
-```bash
-bash ./flows/lint.sh
-```
-
-Lint log:
-
-```text
-runs/alu_pipelined/lint/verilator.log
-```
-
-## 5. Run Synthesis
+## 4. Run Synthesis
 
 ```bash
 yosys -s flows/synth.ys
@@ -66,19 +67,6 @@ Synthesized netlist:
 runs/alu_pipelined/synthesis/netlist.v
 ```
 
-## 6. Run Physical Design
-
-
-```bash
-bash ./flows/physical.sh
-```
-Physical design results:
-
-```text
-runs/alu_pipelined/librelane/
-```
-
-The directory contains the generated layout, reports, logs, and intermediate results from the LibreLane flow.
 
 ---
 

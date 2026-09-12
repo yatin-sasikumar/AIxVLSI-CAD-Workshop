@@ -1,4 +1,4 @@
-read_verilog -sv designs/alu_pipelined/rtl/variations/master_buged.sv
+read_verilog -sv designs/alu_pipelined/rtl/pipelined_alu.sv
 
 hierarchy -top pipelined_alu
 

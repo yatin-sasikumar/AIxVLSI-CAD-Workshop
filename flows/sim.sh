@@ -15,7 +15,7 @@ echo "[1/2] Compiling..."
 
 iverilog -g2012 \
     -o "$RUN/alu_sim" \
-    "$DESIGN/rtl/variations/master_buged.sv" \
+    "$DESIGN/rtl/pipelined_alu.sv" \
     "$DESIGN/tb/pipelined_alu_tb.sv"
 
 echo "[2/2] Running simulation..."

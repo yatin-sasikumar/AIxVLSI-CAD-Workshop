@@ -1,5 +1,13 @@
 # Submission Instructions
 
+## Tracks
+
+Choose **one** of the following tracks for your submission:
+
+1. **Binary to Gray Code Converter**
+2. **Priority Encoder**
+3. **Parity Generator**
+
 ## 1. Open MSYS2
 
 Open **MSYS2 UCRT64** from the Start Menu.

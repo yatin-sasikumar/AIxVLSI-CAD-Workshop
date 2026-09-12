@@ -1,4 +1,4 @@
-read_verilog -sv designs/alu_pipelined/rtl/pipelined_alu.sv
+read_verilog -sv designs/alu_pipelined/rtl/variations/master_buged.sv
 
 hierarchy -top pipelined_alu
 
@@ -10,4 +10,4 @@ opt
 
 stat
 
-write_verilog -noattr runs/alu_pipelined/synthesis/netlist.v
+write_verilog -noattr -noexpr runs/alu_pipelined/Synthesis/netlist.v
